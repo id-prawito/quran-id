@@ -1,15 +1,20 @@
 import { BrowserRouter, Route } from "react-router-dom";
-import React from "react";
+import { useContext } from "react";
 import RouteQuran from "../config/RouteQuran";
 import "./app.scss";
+import GlobalStyles from "../config/GlobalStyles";
+import ThemeContext from "../config/theme/ThemeContext";
+import { ThemeProvider } from "styled-components";
 
 function App() {
-    // const { theme } = useContext(ThemeContext);
+    const { theme } = useContext(ThemeContext);
     return (
-        // <h1>Bisa react</h1>
         <BrowserRouter basename="quran-id">
             <Route>
-                <RouteQuran />
+                <ThemeProvider theme={{ theme }}>
+                    <GlobalStyles />
+                    <RouteQuran />
+                </ThemeProvider>
             </Route>
         </BrowserRouter>
     );
