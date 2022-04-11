@@ -10,7 +10,7 @@ import "./app.scss";
 function App() {
     // const { theme } = useContext(ThemeContext);
     return (
-        <h1>Bisa</h1>
+        <h1>Bisa react</h1>
         // <BrowserRouter basename="quran-id">
         //     <Route>
         //         {/* <ThemeProvider theme={{ theme }}> */}
